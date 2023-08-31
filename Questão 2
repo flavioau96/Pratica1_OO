@@ -1,0 +1,31 @@
+class EmpregadoDaFaculdade {
+    private String nome;
+    private double salario;
+    private int horasAula;
+
+    public EmpregadoDaFaculdade(String nome, double salario, int horasAula) {
+        this.nome = nome;
+        this.salario = salario;
+        this.horasAula = horasAula;
+    }
+
+    double getGastos() {
+        return this.salario + (40 * this.horasAula);
+    }
+
+    String getInfo() {
+        return "nome: " + this.nome + " com salário: " + (this.salario + (40 * this.horasAula));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        EmpregadoDaFaculdade empregado = new EmpregadoDaFaculdade("João", 2000, 10);
+        
+        double gastos = empregado.getGastos();
+        String info = empregado.getInfo();
+        
+        System.out.println("Gastos: " + gastos);
+        System.out.println("Info: " + info);
+    }
+}
