@@ -1,52 +1,52 @@
-public class Main {
-public class Carro {
-    private String marca;
-    private String modelo;
-    private int ano;
-    private double preco;
+public class q1 {
+    public static void main(String[] args) {
+          class Carro {
+                private String marca;
+                private String modelo;
+                private int ano;
+                private double preco;
 
-    public Carro(String marca, String modelo, int ano, double preco) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.ano = ano;
-        this.preco = preco;
+                public Carro(String marca, String modelo, int ano, double preco) {
+                    this.marca = marca;
+                    this.modelo = modelo;
+                    this.ano = ano;
+                    this.preco = preco;
+                }
+
+
+            }
+
+           class Cliente {
+                private String nome;
+                private String cpf;
+                private String endereco;
+                private String telefone;
+
+                public Cliente(String nome, String cpf, String endereco, String telefone) {
+                    this.nome = nome;
+                    this.cpf = cpf;
+                    this.endereco = endereco;
+                    this.telefone = telefone;
+                }
+
+
+            }
+
+
+             class Transação {
+                private Carro carro;
+                private Cliente cliente;
+                private String tipo;
+                private double valor;
+
+                public Transação(Carro carro, Cliente cliente, String tipo, double valor) {
+                    this.carro = carro;
+                    this.cliente = cliente;
+                    this.tipo = tipo;
+                    this.valor = valor;
+                }
+
+
+            }
     }
-
-    
-}
-
-public class Cliente {
-    private String nome;
-    private String cpf;
-    private String endereco;
-    private String telefone;
-
-    public Cliente(String nome, String cpf, String endereco, String telefone) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.endereco = endereco;
-        this.telefone = telefone;
-    }
-
-    
-}
-
-
-public class Transação {
-    private Carro carro;
-    private Cliente cliente;
-    private String tipo; 
-    private double valor;
-
-    public Transação(Carro carro, Cliente cliente, String tipo, double valor) {
-        this.carro = carro;
-        this.cliente = cliente;
-        this.tipo = tipo;
-        this.valor = valor;
-    }
-
-    
-}
-
-    
 }
