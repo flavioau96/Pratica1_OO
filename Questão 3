@@ -1,0 +1,63 @@
+class Aluno {
+    private String nome;
+    private String matricula;
+    private double notaAV1;
+    private double notaAV2;
+    private double notaAE;
+    private String curso;
+    private int periodo;
+
+    public Aluno(String nome, String matricula, double notaAV1, double notaAV2, String curso, int periodo) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.notaAV1 = notaAV1;
+        this.notaAV2 = notaAV2;
+        this.curso = curso;
+        this.periodo = periodo;
+    }
+
+    public void alteraNotaAV1(double notaAV1) {
+        this.notaAV1 = notaAV1;
+    }
+
+    public void alteraNotaAV2(double notaAV2) {
+        this.notaAV2 = notaAV2;
+    }
+
+    public void alteraNotaAE(double notaAE) {
+        this.notaAE = notaAE;
+    }
+
+    public void avaliarAluno() {
+        double somaNotas = notaAV1 + notaAV2;
+        if (somaNotas >= 60) {
+            System.out.println("Aluno " + nome + " Aprovado.");
+        } else {
+            System.out.println("Aluno " + nome + " em Recuperação.");
+        }
+    }
+
+    public void avaliarRecuperacao(double notaAE) {
+        double media = (notaAV1 + notaAV2 + notaAE) / 3;
+        if (media >= 60) {
+            System.out.println("Aluno " + nome + " Aprovado na Recuperação.");
+        } else {
+            System.out.println("Aluno " + nome + " Reprovado na Recuperação.");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Aluno aluno = new Aluno("Maria", "2023001", 75, 82, "Engenharia", 3);
+
+        aluno.avaliarAluno();
+
+        aluno.alteraNotaAV1(45);
+        aluno.alteraNotaAV2(50);
+        aluno.avaliarAluno();
+
+        aluno.alteraNotaAE(35);
+        aluno.avaliarRecuperacao(45);
+    }
+}
